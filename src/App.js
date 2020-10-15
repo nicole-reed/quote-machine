@@ -15,7 +15,7 @@ const App = () => {
 
   const getQuote = async () => {
     try {
-      const response = await fetch(`http://quotes.stormconsultancy.co.uk/random.json`)
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/http://quotes.stormconsultancy.co.uk/random.json`)
       const data = await response.json();
       console.log(data)
       setQuote({ author: data.author, quote: data.quote })
